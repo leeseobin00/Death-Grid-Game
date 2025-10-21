@@ -1,0 +1,107 @@
+╔══════════════════════════════════════════════════════════════╗
+║           🎮 REAPER'S HARVEST - QUICK START GUIDE 🎮         ║
+╚══════════════════════════════════════════════════════════════╝
+
+📁 FILES INCLUDED:
+  ✓ index.html  - Main game file
+  ✓ style.css   - All styling and animations
+  ✓ app.js      - Complete game logic
+  ✓ README.md   - Full documentation
+
+🚀 INSTANT PLAY (3 WAYS):
+
+1️⃣  DOUBLE-CLICK METHOD (Easiest)
+   → Just double-click "index.html"
+   → Opens in your default browser
+   → Start playing immediately!
+
+2️⃣  LOCAL SERVER METHOD (Best Experience)
+   
+   Python (if installed):
+   → Open terminal/command prompt in this folder
+   → Run: python -m http.server 8000
+   → Open browser: http://localhost:8000
+   
+   Node.js (if installed):
+   → Run: npx http-server
+   → Follow the URL shown
+   
+3️⃣  VS CODE METHOD (For Developers)
+   → Install "Live Server" extension
+   → Right-click index.html
+   → Select "Open with Live Server"
+
+🎯 HOW TO PLAY:
+
+1. Enter bet amount (0.01 - 10 fake ETH)
+2. Choose grid size (5x5, 7x7, or 10x10)
+3. Click START GAME
+4. Click tiles to reveal:
+   👻 Soul = Multiplier boost (1.1x - 3.0x)
+   ⚰️  Coffin = Safe, no bonus
+   💀 Reaper = Game over!
+5. Cash out anytime to keep your winnings!
+
+⚠️  WATCH OUT FOR FOG! After 5 reveals, there's a 20% chance
+    fog adds 2 extra Reapers to the grid!
+
+💡 FEATURES:
+  ✓ Start with 100 fake ETH (auto-refills)
+  ✓ Top 10 leaderboard (saved locally)
+  ✓ Daily streak counter
+  ✓ Sound effects (toggle on/off)
+  ✓ Share your best score
+  ✓ Fully mobile responsive
+  ✓ No internet required!
+
+🎨 BROWSER REQUIREMENTS:
+  ✓ Chrome, Firefox, Safari, Edge (any modern browser)
+  ✓ JavaScript enabled
+  ✓ Works on mobile & desktop
+
+📊 YOUR DATA:
+  • Wallet balance saved to browser
+  • Leaderboard saved locally
+  • No data sent to servers
+  • Clear browser data to reset
+
+🎮 STRATEGY TIPS:
+  • Start with small bets to learn the grid
+  • Cash out early on 10x10 (more Reapers!)
+  • Multipliers stack: 1.5x × 2.0x = 3.0x total
+  • After 5 reveals, be ready for fog!
+
+🐛 TROUBLESHOOTING:
+  
+  No sound?
+  → Check browser audio permissions
+  → Click page first (browsers need user interaction)
+  → Toggle sound in settings
+  
+  Wallet reset?
+  → Auto-refills at 0 (unlimited demo mode)
+  → Your leaderboard is still saved!
+  
+  Game not loading?
+  → Try different browser
+  → Check JavaScript is enabled
+  → Use local server method instead
+
+📱 MOBILE PLAY:
+  • Transfer files to phone
+  • Open index.html in mobile browser
+  • Or use a mobile code editor app
+  • Touch controls work perfectly!
+
+🎯 GAME STATS TRACKED:
+  • Current wallet balance
+  • Best harvests (top 10)
+  • Daily play streak
+  • Tiles revealed per game
+  • Live multiplier & potential win
+
+💀 GOOD LUCK, HARVESTER! 💀
+
+═══════════════════════════════════════════════════════════════
+Total Size: ~60KB | No Dependencies | Pure HTML/CSS/JS
+═══════════════════════════════════════════════════════════════
