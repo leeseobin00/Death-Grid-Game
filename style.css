@@ -55,14 +55,14 @@ header h1 {
 }
 
 .wallet-display {
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin: 10px 0;
     color: #ffd700;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 .streak-display {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #ff6b6b;
     margin-top: 10px;
 }
@@ -182,13 +182,13 @@ header h1 {
 
 .stat-label {
     display: block;
-    font-size: 0.9em;
+    font-size: 1.0em;
     color: #b19cd9;
     margin-bottom: 5px;
 }
 
 .stat-value {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
     color: #fff;
 }
@@ -224,6 +224,7 @@ header h1 {
     padding: 10px;
     border-radius: 8px;
     font-weight: bold;
+    font-size: 1.05em;
     color: #00ffff;
     margin-bottom: 10px;
     animation: pulse 1s infinite;
@@ -240,7 +241,7 @@ header h1 {
     flex: 1;
     min-width: 140px;
     padding: 12px 15px;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
     background: linear-gradient(135deg, #4b0082, #8a2be2);
     border: 2px solid #8a2be2;
@@ -267,7 +268,7 @@ header h1 {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     color: #ff6b6b;
     margin-bottom: 20px;
@@ -312,7 +313,7 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1em;
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
@@ -406,13 +407,81 @@ header h1 {
 }
 
 .tile-content {
-    font-size: 1.8em;
+    font-size: 1.6em;
     animation: fadeIn 0.3s;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    padding: 2px;
+    white-space: normal;
+}
+
+.tile-content small {
+    font-size: 0.7em;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.5); }
     to { opacity: 1; transform: scale(1); }
+}
+
+/* Scale tile content and unrevealed marker per grid size to prevent clipping */
+
+.grid-container.size-5 .tile-content {
+    font-size: 1.2em;
+}
+
+.grid-container.size-7 .tile-content {
+    font-size: 1.12em;
+}
+
+.grid-container.size-10 .tile-content {
+    font-size: 1.02em;
+}
+
+.grid-container.size-5 .tile::before {
+    font-size: 1.2em;
+}
+
+.grid-container.size-7 .tile::before {
+    font-size: 1.0em;
+}
+
+.grid-container.size-10 .tile::before {
+    font-size: 0.9em;
+}
+
+/* Dedicated icon scaling so large emojis fit inside tiles */
+.tile-content .icon {
+    display: block;
+    line-height: 1;
+}
+
+.grid-container.size-5 .tile-content .icon {
+    font-size: 0.85em;
+}
+
+.grid-container.size-7 .tile-content .icon {
+    font-size: 0.84em;
+}
+
+.grid-container.size-10 .tile-content .icon {
+    font-size: 0.8em;
+}
+
+/* Slightly reduce small text further on denser grids */
+.grid-container.size-7 .tile-content small {
+    font-size: 0.64em;
+}
+
+.grid-container.size-10 .tile-content small {
+    font-size: 0.6em;
 }
 
 /* Game Controls */
@@ -500,7 +569,7 @@ header h1 {
 }
 
 .achievement-icon {
-    font-size: 2em;
+    font-size: 2.2em;
     min-width: 40px;
     text-align: center;
 }
@@ -511,12 +580,13 @@ header h1 {
 
 .achievement-name {
     font-weight: bold;
+    font-size: 1.05em;
     color: #ffd700;
     margin-bottom: 3px;
 }
 
 .achievement-desc {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #b19cd9;
 }
 
@@ -552,6 +622,10 @@ header h1 {
     border: 1px solid #4b0082;
 }
 
+.leaderboard-entry .entry-info {
+    font-size: 1.05em;
+}
+
 .leaderboard-entry.rank-1 {
     border-color: #ffd700;
     background: rgba(255, 215, 0, 0.1);
@@ -576,6 +650,7 @@ header h1 {
 .entry-score {
     color: #00ff00;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 /* Settings */

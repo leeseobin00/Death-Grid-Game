@@ -393,7 +393,7 @@ function revealTile(index) {
 // Handle reaper tile
 function handleReaper(tileElement) {
     tileElement.classList.add('reaper');
-    tileElement.innerHTML = '<div class="tile-content">💀</div>';
+    tileElement.innerHTML = '<div class="tile-content"><span class="icon">💀</span></div>';
     
     playSound('death');
     gameState.gameActive = false;
@@ -404,7 +404,7 @@ function handleReaper(tileElement) {
             if (tile.type === 'reaper' && !tile.revealed) {
                 const el = document.querySelector(`[data-index="${i}"]`);
                 el.classList.add('revealed', 'reaper');
-                el.innerHTML = '<div class="tile-content">💀</div>';
+                el.innerHTML = '<div class="tile-content"><span class="icon">💀</span></div>';
             }
         });
         
@@ -418,7 +418,7 @@ function handleSoul(tileElement, multiplier) {
     const finalMultiplier = multiplier * comboBonus;
     
     tileElement.classList.add('soul');
-    let displayText = `👻<br>${finalMultiplier.toFixed(2)}x`;
+    let displayText = `<span class="icon">👻</span><br>${finalMultiplier.toFixed(2)}x`;
     if (gameState.combo > 0) {
         displayText += `<br><small>🔥${gameState.combo}x</small>`;
     }
@@ -439,7 +439,7 @@ function handleSoul(tileElement, multiplier) {
 // Handle neutral tile
 function handleNeutral(tileElement) {
     tileElement.classList.add('neutral');
-    tileElement.innerHTML = '<div class="tile-content">⚰️</div>';
+    tileElement.innerHTML = '<div class="tile-content"><span class="icon">⚰️</span></div>';
     
     playSound('click');
 }
@@ -450,7 +450,7 @@ function handleGoldenSoul(tileElement, multiplier) {
     const finalMultiplier = multiplier * comboBonus;
     
     tileElement.classList.add('golden');
-    let displayText = `⭐<br>${finalMultiplier.toFixed(2)}x`;
+    let displayText = `<span class=\"icon\">⭐</span><br>${finalMultiplier.toFixed(2)}x`;
     if (gameState.combo > 0) {
         displayText += `<br><small>🔥${gameState.combo}x</small>`;
     }
@@ -469,7 +469,7 @@ function handleGoldenSoul(tileElement, multiplier) {
 // Handle cursed tile
 function handleCursed(tileElement, multiplier) {
     tileElement.classList.add('cursed');
-    tileElement.innerHTML = `<div class="tile-content">🕷️<br>${multiplier.toFixed(2)}x</div>`;
+    tileElement.innerHTML = `<div class=\"tile-content\"><span class=\"icon\">🕷️</span><br>${multiplier.toFixed(2)}x</div>`;
     
     gameState.multiplier *= multiplier;
     playSound('death');
@@ -482,7 +482,7 @@ function handleMystery(tileElement, multiplier) {
     const isGood = multiplier > 1.0;
     
     tileElement.classList.add(isGood ? 'mystery-good' : 'mystery-bad');
-    tileElement.innerHTML = `<div class="tile-content">❓<br>${multiplier.toFixed(2)}x</div>`;
+    tileElement.innerHTML = `<div class=\"tile-content\"><span class=\"icon\">❓</span><br>${multiplier.toFixed(2)}x</div>`;
     
     gameState.multiplier *= multiplier;
     playSound(isGood ? 'harvest' : 'click');
